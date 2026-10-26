@@ -6,6 +6,7 @@ import { Sidebar } from './components/layout/Sidebar';
 import { BottomNav } from './components/layout/BottomNav';
 import { ToastContainer } from './components/common/Toast';
 
+import { QuickTaskPage } from './pages/QuickTaskPage';
 import { DashboardPage } from './pages/DashboardPage';
 import { DailyCheckPage } from './pages/DailyCheckPage';
 import { ItemsPage } from './pages/ItemsPage';
@@ -26,9 +27,21 @@ const AppContent: React.FC = () => {
 
         <main className="flex-1 min-w-0 p-4 sm:p-6 max-w-7xl mx-auto w-full">
           <Routes>
-            <Route path="/" element={<DashboardPage />} />
+            {/* Quick Work / Daily Entry - simplified for factory workers */}
+            <Route path="/" element={<QuickTaskPage />} />
+
+            {/* Complete Executive Details & Reports Section */}
+            <Route path="/details" element={<DashboardPage />} />
+            <Route path="/dashboard" element={<Navigate to="/details" replace />} />
+            <Route path="/reports" element={<Navigate to="/details" replace />} />
+
+            {/* Daily Check & Balance Sheet */}
             <Route path="/daily" element={<DailyCheckPage />} />
+
+            {/* Raw Material Items List & History */}
             <Route path="/items" element={<ItemsPage />} />
+
+            {/* Uniforms Finished Goods & Sales */}
             <Route path="/uniforms" element={<UniformsPage />} />
 
             {/* Backwards compatibility redirects */}

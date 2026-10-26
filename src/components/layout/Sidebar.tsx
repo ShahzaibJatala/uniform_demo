@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
-  LayoutDashboard, 
-  CalendarCheck2, 
+  Zap,
+  BarChart3, 
   Layers, 
   Shirt 
 } from 'lucide-react';
@@ -11,15 +11,15 @@ export const Sidebar: React.FC = () => {
   const navItems = [
     {
       to: '/',
-      label: 'Dashboard',
-      labelUrdu: 'ہوم ڈیش بورڈ',
-      icon: LayoutDashboard,
+      label: 'Quick Work',
+      labelUrdu: 'روزانہ کام',
+      icon: Zap,
     },
     {
-      to: '/daily',
-      label: 'Daily Check & Balance',
-      labelUrdu: 'روزانہ کھاتہ',
-      icon: CalendarCheck2,
+      to: '/details',
+      label: 'Details & Reports',
+      labelUrdu: 'تفصیلی کھاتہ',
+      icon: BarChart3,
     },
     {
       to: '/items',

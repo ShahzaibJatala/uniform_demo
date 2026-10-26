@@ -1,8 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { 
-  LayoutDashboard, 
-  CalendarCheck2, 
+  Zap,
+  BarChart3, 
   Layers, 
   Shirt 
 } from 'lucide-react';
@@ -11,15 +11,15 @@ export const BottomNav: React.FC = () => {
   const tabs = [
     {
       to: '/',
-      label: 'Dashboard',
-      labelUrdu: 'ڈیش بورڈ',
-      icon: LayoutDashboard,
+      label: 'Quick Work',
+      labelUrdu: 'کام',
+      icon: Zap,
     },
     {
-      to: '/daily',
-      label: 'Daily',
-      labelUrdu: 'روزانہ',
-      icon: CalendarCheck2,
+      to: '/details',
+      label: 'Reports',
+      labelUrdu: 'کھاتہ',
+      icon: BarChart3,
     },
     {
       to: '/items',

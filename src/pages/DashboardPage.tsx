@@ -101,6 +101,31 @@ export const DashboardPage: React.FC = () => {
   return (
     <div className="space-y-6 pb-20 lg:pb-8 w-full">
 
+      {/* Quick Work & Details Toggle Banner */}
+      <div className="bg-white rounded-2xl p-5 shadow-sm border border-slate-200/80 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <div className="flex items-center gap-2">
+            <span className="text-sm font-bold uppercase tracking-wider bg-teal-100 text-teal-800 px-2 py-0.5 rounded-md">
+              Executive View
+            </span>
+            <span className="text-sm text-slate-500 font-medium">
+              Detailed Accounts & History
+            </span>
+          </div>
+          <h1 className="text-2xl font-bold text-slate-900 mt-1 tracking-tight">
+            Details & Reports
+          </h1>
+        </div>
+
+        <Link
+          to="/"
+          className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 text-white text-sm font-bold transition-all shadow-sm shrink-0"
+        >
+          <span>Switch to Quick Work</span>
+          <ArrowRight className="w-4 h-4" />
+        </Link>
+      </div>
+
       {/* 1. FOUR KPI CARDS (clickable for detailed breakdown) */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         
